@@ -5,6 +5,9 @@ export default defineConfig({
 	plugins: [
 		svelte({
 			/* plugin options */
+			build: {
+				outDir: '../html-build'
+			  }
 		})
 	]
 });
