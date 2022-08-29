@@ -32,7 +32,7 @@
 
   <button class="bg-[#f4c518] p-2 m-5 text-black" style="border-radius: 10px;font-weight:600;" on:click={handleClick}>GENERATE</button>
 
-  <div use:autoAnimate class="overflow-hidden ">
+  <div use:autoAnimate class="overflow-hidden whitespace-pre-wrap">
     {#if isGenerated}
     <div class="text-white text-lg relative p-10 overflow-x-hidden">
      {inputPlot}
@@ -42,8 +42,6 @@
 </div>
 
 <Generation Title={inputTitle}/>
-
-
 
 
 <style>
