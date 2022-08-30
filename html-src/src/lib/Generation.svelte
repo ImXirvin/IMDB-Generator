@@ -7,20 +7,17 @@
     let runTime = "1h 30m"
 </script>
 
-<div class="text-white w-[100%] pt-10 pb-10 bg-[#1f1f1f] flex justify-center relative ">
+<div class="text-white w-[100%] pt-10 pb-10 bg-[#1f1f1f] flex-row justify-center relative ">
     <div class="grid grid-cols-2  relative w-[75%]" style="grid-template-columns: 60% 40%;">
         <div class="flex flex-col gap-5 justify-start self-start">
             <div class="bold text-4xl  pr-1 max-w-[100%] relative " style="word-wrap: break-word;">{Title}</div>
-            
-
+        
             <ul class="text-2xl text-[#bcbcbc] relative inline-flex gap-5">
                 <li style="vertical-align: middle;">{releaseYear}</li>
                 <li class="list-item" >{ageRating}</li>
                 <li class="list-item" >{runTime}</li>
             </ul>
-
         </div>
-
 
         <div class="w-[100] flex-row gap-x-10 inline-flex right-0 relative justify-center self-end">
             <!-- IMDb RATING  -->
@@ -60,11 +57,41 @@
                 
                 </div>
             </div>
-
-
         </div>
     </div>
+
+
+    <section class="overflow-hidden w-[50%] relative">
+        <div class="container  py-2 mx-auto">
+          <div class="flex flex-wrap -m-1 md:-m-2">
+            <div class="flex flex-wrap w-1/2">
+              <div class="w-full p-0 md:p-[3px]">
+                <img alt="gallery" class="block object-cover object-center w-full h-full"
+                  src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp">
+              </div>
+            </div>
+            <div class="flex flex-wrap w-1/2">
+              <div class="w-full p-0 md:p-[3px]">
+                <img alt="gallery" class="block object-cover object-center w-full h-full"
+                  src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(74).webp">
+              </div>
+              <div class="w-1/2 p-0 md:p-[3px]">
+                <img alt="gallery" class="block object-cover object-center w-full h-full"
+                  src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(75).webp">
+              </div>
+              <div class="w-1/2 p-0 md:p-[3px]">
+                <img alt="gallery" class="block object-cover object-center w-full h-full"
+                  src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(77).webp">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    
+    
 </div>
+
+
 
 <style>
 
