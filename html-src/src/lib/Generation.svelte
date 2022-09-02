@@ -7,9 +7,9 @@
     let runTime = "1h 30m"
 </script>
 
-<div class="text-white w-[100%] pt-10 pb-10 bg-[#1f1f1f] flex-row justify-center relative ">
+<div class="text-white w-[100%] pt-10 pb-10 bg-[#1f1f1f] flex  justify-center relative ">
     <div class="grid grid-cols-2  relative w-[75%]" style="grid-template-columns: 60% 40%;">
-        <div class="flex flex-col gap-5 justify-start self-start">
+        <div class="flex flex-col gap-5  self-center">
             <div class="bold text-4xl  pr-1 max-w-[100%] relative " style="word-wrap: break-word;">{Title}</div>
         
             <ul class="text-2xl text-[#bcbcbc] relative inline-flex gap-5">
@@ -59,41 +59,65 @@
             </div>
         </div>
     </div>
+    
+</div>
 
+<div class="overflow-hidden w-[100%] max-h-fit relative bg-[#1f1f1f] mx-auto ">
+<section class=" pic-grid overflow-hidden w-[75%] relative  bg-[#1f1f1f] mx-auto grid place-items-center    ">
+    <img src="https://m.media-amazon.com/images/M/MV5BNGYyZGM5MGMtYTY2Ni00M2Y1LWIzNjQtYWUzM2VlNGVhMDNhXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg"
+            alt="kjbasd" class="relative object-contain" >
 
-    <section class="overflow-hidden w-[50%] relative">
-        <div class="container  py-2 mx-auto">
-          <div class="flex flex-wrap -m-1 md:-m-2">
-            <div class="flex flex-wrap w-1/2">
-              <div class="w-full p-0 md:p-[3px]">
-                <img alt="gallery" class="block object-cover object-center w-full h-full"
-                  src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp">
-              </div>
-            </div>
-            <div class="flex flex-wrap w-1/2">
-              <div class="w-full p-0 md:p-[3px]">
-                <img alt="gallery" class="block object-cover object-center w-full h-full"
-                  src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(74).webp">
-              </div>
-              <div class="w-1/2 p-0 md:p-[3px]">
-                <img alt="gallery" class="block object-cover object-center w-full h-full"
-                  src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(75).webp">
-              </div>
-              <div class="w-1/2 p-0 md:p-[3px]">
-                <img alt="gallery" class="block object-cover object-center w-full h-full"
-                  src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(77).webp">
-              </div>
-            </div>
-          </div>
+            <img src="https://cdn.wallpapersafari.com/66/81/kmY4Rg.jpg"
+            alt="kjbasd" class="object-contain relative">
+    <div class="Options grid place-content-center place-items-center text-white h-[100%] w-[100%]" style="font-weight: 600;">
+        <div class="m-[0.5em] p-[5em] grid place-items-center Option">
+            <svg style="transform: scale(1.5); margin-bottom:0.5em;" xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="ipc-icon ipc-icon--video-library ipc-icon--inline sc-a93004d6-0 gVqJqU" id="iconContext-video-library" viewBox="0 0 24 24" fill="white" role="presentation"><path d="M3 6c-.55 0-1 .45-1 1v13c0 1.1.9 2 2 2h13c.55 0 1-.45 1-1s-.45-1-1-1H5c-.55 0-1-.45-1-1V7c0-.55-.45-1-1-1zm17-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-8 12.5v-9l5.47 4.1c.27.2.27.6 0 .8L12 14.5z"></path></svg>
+            <p>43 VIDEOS</p>
         </div>
-      </section>
-    
-    
+        <div class="m-[0.5em] p-[5em] grid place-items-center Option">
+            <svg style="transform: scale(1.5); margin-bottom:0.5em;" xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="ipc-icon ipc-icon--collections ipc-icon--inline sc-a93004d6-0 gVqJqU" id="iconContext-collections" viewBox="0 0 24 24" fill="white" role="presentation"><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M22 16V4c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2zm-10.6-3.47l1.63 2.18 2.58-3.22a.5.5 0 0 1 .78 0l2.96 3.7c.26.33.03.81-.39.81H9a.5.5 0 0 1-.4-.8l2-2.67c.2-.26.6-.26.8 0zM2 7v13c0 1.1.9 2 2 2h13c.55 0 1-.45 1-1s-.45-1-1-1H5c-.55 0-1-.45-1-1V7c0-.55-.45-1-1-1s-1 .45-1 1z"></path></svg>
+            <p>99+ PHOTOS</p>
+        </div>
+    </div>
+  </section>
 </div>
 
 
 
 <style>
+
+    .pic-grid {
+    display: grid; 
+    grid-auto-columns: 1fr; 
+    grid-template-columns: auto 60% auto; 
+    grid-template-rows: 1fr; 
+    gap: 1em 1em; 
+    grid-template-areas: 
+        ". . Options";
+    height: auto;
+    max-height: auto;
+
+    }
+    .Options {
+    display: grid; 
+    grid-template-columns: 1fr; 
+    grid-template-rows: 1fr 1fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+        "."
+        "."; 
+    grid-area: Options; 
+    }
+
+    .Option:hover {
+        background-color: #414141;
+    }
+
+
+
+    img {
+        object-fit: fill;
+    }
 
     .rating {
         padding-left: 0.5rem;
