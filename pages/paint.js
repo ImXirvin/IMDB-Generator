@@ -8,6 +8,7 @@ import Download from "components/download";
 import { XCircle as StartOverIcon } from "lucide-react";
 import { Code as CodeIcon } from "lucide-react";
 import { Rocket as RocketIcon } from "lucide-react";
+import { Skills } from "components/Skills";
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
@@ -25,8 +26,10 @@ export default function Home() {
       ? prevPrediction.output[prevPrediction.output.length - 1]
       : null;
 
+      let debugMovieTitle = "The three monkeys and the great zoo escape"
+
     const body = {
-      prompt:  "bioluminescent cyberpunk jellyfish, deep sea diver, extreme light, distant cyberpunk atlantis, organic, bio domes, coral, deep ocean, robotic, mariana trench midnight zone, bubbles, hyper realistic, hyper detailed, trending in artstation, studio quality, photorealistic, photo, by jesper ejsing, wlop, paul lehr, 4K, HD",
+      prompt:  "A movie poster for '" + debugMovieTitle + "' ",
       init_image: userUploadedImage
         ? await readAsDataURL(userUploadedImage)
         : // only use previous prediction as init image if there's a mask
