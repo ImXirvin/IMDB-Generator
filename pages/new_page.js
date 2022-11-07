@@ -8,6 +8,7 @@ import { Projects } from "../components/Projects";
 import { Footer } from "../components/Footer";
 
 import { useState, useEffect } from 'react';
+import Paint from 'paint';
 
 
 
@@ -51,6 +52,7 @@ function New_Page() {
      
       
       <Projects />
+
       
       
     </div>

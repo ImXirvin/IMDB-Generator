@@ -1,18 +1,26 @@
-import { useState } from "react";
+
+import { useState, useEffect } from 'react';
 import Head from "next/head";
 import Link from "next/link";
-import Canvas from "components/canvas";
-import PromptForm from "components/prompt-form";
-import Dropzone from "components/dropzone";
-import Download from "components/download";
+import Canvas from "../components/canvas";
+import PromptForm from "../components/prompt-form";
+import Dropzone from "../components/dropzone";
+import Download from "../components/download";
 import { XCircle as StartOverIcon } from "lucide-react";
 import { Code as CodeIcon } from "lucide-react";
 import { Rocket as RocketIcon } from "lucide-react";
-import { Skills } from "components/Skills";
+import { Projects } from "../components/Projects";
+import { Banner } from "../components/Banner";
+import { Skills } from "../components/Skills";
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+
+
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
-export default function Home() {
+const Paint = (props) => {
   const [predictions, setPredictions] = useState([]);
   const [error, setError] = useState(null);
   const [maskImage, setMaskImage] = useState(null);
@@ -26,10 +34,8 @@ export default function Home() {
       ? prevPrediction.output[prevPrediction.output.length - 1]
       : null;
 
-      let debugMovieTitle = "The three monkeys and the great zoo escape"
-
     const body = {
-      prompt:  "A movie poster for '" + debugMovieTitle + "' ",
+      prompt:  "bioluminescent cyberpunk jellyfish, deep sea diver, extreme light, distant cyberpunk atlantis, organic, bio domes, coral, deep ocean, robotic, mariana trench midnight zone, bubbles, hyper realistic, hyper detailed, trending in artstation, studio quality, photorealistic, photo, by jesper ejsing, wlop, paul lehr, 4K, HD",
       init_image: userUploadedImage
         ? await readAsDataURL(userUploadedImage)
         : // only use previous prediction as init image if there's a mask
@@ -91,85 +97,56 @@ export default function Home() {
 
 
   return (
+    
    
     <div>
       <Head>
         <title>Inpainting with Stable Diffusion &amp; Replicate</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      <div className="max-w-xs my-2 overflow-hidden rounded shadow-lg">
 
-    </div>
+      
+
+      <Banner />
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+     
+      
+      <Skills />
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+
+     
+     <div >
+     
+    
+      <Projects />
+     </div>
+    
 
    
    
    
-    <h1 className="generate_button">Make Your Own Movie</h1>
+    
    
-      <main >
-       
-
-       
-
-        {error && <div>{error}</div>}
-
-        <div className="border-hairline max-w-[512px] mx-auto relative">
-          <Dropzone
-            onImageDropped={setUserUploadedImage}
-            predictions={predictions}
-            userUploadedImage={userUploadedImage}
-          />
-          <div
-            className="bg-gray-50 relative max-h-[460px] w-full flex items-stretch"
-            // style={{ height: 0, paddingBottom: "100%" }}
-          >
-            <Canvas
-              predictions={predictions}
-              userUploadedImage={userUploadedImage}
-              onDraw={setMaskImage}
-            />
-          </div>
-        </div>
-
-        <div className="max-w-[512px] mx-auto">
-          <PromptForm onSubmit={handleSubmit} />
-
-          <div className="text-center">
-            {((predictions.length > 0 &&
-              predictions[predictions.length - 1].output) ||
-              maskImage ||
-              userUploadedImage) && (
-              <button className="lil-button" onClick={startOver}>
-                <StartOverIcon className="icon" />
-                Start over
-              </button>
-            )}
-
-            <Download predictions={predictions} />
-           
-            <Link href="https://replicate.com/stability-ai/stable-diffusion">
-              <a target="_blank" className="lil-button">
-                <RocketIcon className="icon" />
-                Run with an API
-              </a>
-            </Link>
-            <Link href="https://github.com/zeke/inpainter">
-              <a
-                className="lil-button"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <CodeIcon className="icon" />
-                View on GitHub
-              </a>
-            </Link>
-          </div>
-        </div>
-      </main>
+      
       
     </div>
   );
 }
+export default Paint;
 
 function readAsDataURL(file) {
   return new Promise((resolve, reject) => {

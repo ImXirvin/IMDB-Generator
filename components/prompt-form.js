@@ -1,14 +1,7 @@
 import { useState } from "react";
 
 const samplePrompts = [
-  "a gentleman otter in a 19th century portrait",
-  "bowl of ramen in the style of a comic book",
-  "flower field drawn by Jean-Jacques Sempé",
-  "illustration of a taxi cab in the style of r crumb",
-  "multicolor hyperspace",
-  "painting of fruit on a table in the style of Raimonds Staprans",
-  "pencil sketch of robots playing poker",
-  "photo of an astronaut riding a horse",
+  " Mario In a Swimming Pool"
 ];
 import sample from "lodash/sample";
 
@@ -24,7 +17,7 @@ export default function PromptForm(props) {
       <div className="flex max-w-[512px]">
         
 
-      <button type="submit" >
+      <button className="sd_generate_button" >
           Generate
         </button>
       </div>
